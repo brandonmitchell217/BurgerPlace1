@@ -125,22 +125,23 @@ nav .burger {
   align-items: center;
   margin-top: 30px;
 }
-button {
+.cta a {
   position: relative;
-  width: 160px;
+  max-width: 160px;
+  width: 40%;
   padding: 8px 0;
-  outline: none;
-  border: none;
+  text-align: center;
   border-radius: 6px;
   font-family: 'Hind Madurai', sans-serif;
   font-weight: bold;
   font-size: 14px;
+  color: #000;
   background: #f8db18;
   border: 2px solid transparent;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-button:hover {
+.cta a:hover {
   background: transparent;
   color: #f8db18;
   border: 2px solid #f8db18;
@@ -223,7 +224,7 @@ button:hover {
     width: 110%;
   }
   .home .content {
-    height: 100px;
+    height: 18%;
   }
   .line {
     height: 4px;
@@ -296,10 +297,10 @@ button:hover {
     font-size: 44px;
   }
   .fresh {
-    left: 12vw;
+    left: 0.25em;
   }
   .original {
-    right: 12vw;
+    right: 0.25em;
   }
 }
 @media only screen and (max-width: 321px) {
@@ -308,6 +309,6 @@ button:hover {
     font-size: 36px;
   }
   .home .content {
-    height: 78px;
+    height: 108px;
   }
 }
