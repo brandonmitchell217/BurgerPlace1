@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateLoad() {
   load += load < 100
   loadTime.innerHTML = load
-  document.body.style.overflowY = 'scroll'
+  document.body.style.overflowY = 'hidden'
 }
 
 burger.addEventListener('click', navMenu)
