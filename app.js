@@ -1,5 +1,19 @@
 const burger = document.querySelector('.burger')
 const navList = document.querySelector('.navList')
+let load = 1
+const loadTime = document.getElementById('loadTime')
+
+document.addEventListener('DOMContentLoaded', () => {
+  gsap.to('.innerBar', { x: 0, duration: 2.75 })
+  gsap.to('.preloader', { autoAlpha: 0, delay: 2.8, ease: 'power1.in' })
+  setInterval(updateLoad, 22)
+})
+
+function updateLoad() {
+  load += load < 100
+  loadTime.innerHTML = load
+  document.body.style.overflowY = 'scroll'
+}
 
 burger.addEventListener('click', navMenu)
 
@@ -15,7 +29,7 @@ function navMenu() {
   }
 }
 
-const tl = gsap.timeline({ delay: 1 })
+const tl = gsap.timeline({ delay: 2.98 })
 tl.from('.homeGraphic', { duration: 2, opacity: 0 })
 tl.from('nav', { duration: 1.5, y: '-100%' }, '<')
 tl.from('.navList a', { opacity: 0, stagger: 0.25 }, '>-0.5')
