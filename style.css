@@ -173,13 +173,13 @@ nav .burger {
 }
 .cta a {
   position: relative;
-  max-width: 160px;
+  max-width: 300px;
   width: 40%;
   padding: 8px 0;
   text-align: center;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: clamp(0.8rem, calc(4vw - 12px), 1.8rem);
   color: #000;
   background: #f8db18;
   border: 2px solid transparent;
@@ -193,7 +193,6 @@ nav .burger {
 }
 
 .social {
-  height: 225px;
   position: absolute;
   z-index: 3;
   right: 20px;
@@ -201,12 +200,13 @@ nav .burger {
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .social a {
-  font-size: 2rem;
+  margin: 5vh 0;
+  font-size: clamp(1.1rem, calc(4vw - 18px), 3rem);
   filter: drop-shadow(0 0 6px rgba(248, 219, 24, 0.6));
   transition: all 0.3s ease-in-out;
 }
@@ -344,6 +344,7 @@ nav .burger {
   .cta {
     width: 100%;
   }
+
   .fresh,
   .original {
     font-size: 44px;
@@ -354,6 +355,18 @@ nav .burger {
   .original {
     right: 0.25em;
   }
+  .social {
+    width: 100%;
+    top: 76%;
+    right: 0;
+    transform: translateY(-76%);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .social a {
+    filter: drop-shadow(0 0 6px #000);
+  }
 }
 @media only screen and (max-width: 321px) {
   .fresh,
@@ -362,5 +375,18 @@ nav .burger {
   }
   .home .content {
     height: 108px;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .home .content {
+    min-width: 38vw;
+    width: 750px;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .fresh,
+  .original {
+    font-size: 80px;
   }
 }
