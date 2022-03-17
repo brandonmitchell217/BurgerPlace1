@@ -38,3 +38,11 @@ tl.from('.line', { duration: 2.5, x: '-100%', opacity: 0 }, '>-1.25')
 tl.from('.original', { duration: 1.5, y: '150%' }, '>-1.5')
 tl.from('.fresh', { duration: 1.5, y: '-150%' }, '>-1')
 tl.from('.cta', { duration: 1, scale: 0, stagger: 0.5 }, '>-1')
+
+const fkLnk = document.querySelectorAll('.fkLnk')
+
+fkLnk.forEach((lnk) => {
+  lnk.addEventListener('click', (e) => {
+    e.preventDefault()
+  })
+})
