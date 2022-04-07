@@ -1,6 +1,6 @@
 # Burger Place
 
-![burger place landing](burgerplace.jpg)
+![burger place landing](burgerPlace.jpg)
 
 ## Description
 
